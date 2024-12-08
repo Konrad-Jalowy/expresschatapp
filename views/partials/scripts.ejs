@@ -31,7 +31,9 @@
             var span1 = document.createElement('span');
             var span2 = document.createElement('span');
             span1.textContent = name + ":";
+            span1.classList.add("name");
             span2.textContent = message;
+            span2.classList.add("message");
             item.appendChild(span1);
             item.appendChild(span2);
             
