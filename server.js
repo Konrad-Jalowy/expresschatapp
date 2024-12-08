@@ -6,6 +6,7 @@ const { Server } = require("socket.io");
 const io = new Server(server);
 
 const users = {};
+let users_number = 0;
 
 app.set('view engine', 'ejs');
 
@@ -17,10 +18,12 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
     socket.on('new-user', name => {
-        users[socket.id] = name
-        socket.broadcast.emit('user-connected', name)
+        users[socket.id] = name;
+        users_number++;
+        socket.broadcast.emit('user-connected', name);
+        io.emit("users-number-change", users_number);
       });
-      
+
     socket.on('chat message', (msg) => {
       io.emit('chat message', msg);
     });
