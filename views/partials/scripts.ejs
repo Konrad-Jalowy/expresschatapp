@@ -34,6 +34,8 @@
             span1.classList.add("name");
             span2.textContent = message;
             span2.classList.add("message");
+            let licls = name.startsWith("You(") ? 'your' : 'not-your';
+            item.classList.add(licls);
             item.appendChild(span1);
             item.appendChild(span2);
             

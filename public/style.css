@@ -6,6 +6,7 @@
 
 body {
     background-color: #e2e8f0;
+    background-color: #d1fae5;
 }
 
 form {
@@ -47,9 +48,16 @@ form button:hover{
     list-style: none;
     margin: 0;
     padding: 0;
-    background-color: #e9d5ff;
+    /* background-color: #e9d5ff; */
+}
+#messages li {
+    padding: 1rem;
+    border-bottom: 1px solid #e9d5ff;
 }
 
+#messages li.your {
+    background-color: #e9d5ff;
+}
 .header {
     background-color: #b91c1c;
     color: #fecaca;
