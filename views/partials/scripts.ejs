@@ -28,7 +28,14 @@
 
         function appendMessage(name, message){
             var item = document.createElement('li');
-          item.textContent = `${name}: ${message}`;
+            var span1 = document.createElement('span');
+            var span2 = document.createElement('span');
+            span1.textContent = name + ":";
+            span2.textContent = message;
+            item.appendChild(span1);
+            item.appendChild(span2);
+            
+            
           messages.appendChild(item);
           window.scrollTo(0, document.body.scrollHeight);
         }
