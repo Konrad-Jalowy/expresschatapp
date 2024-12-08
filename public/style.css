@@ -6,7 +6,7 @@
 
 body {
     background-color: #e2e8f0;
-    background-color: #d1fae5;
+    /* background-color: #d1fae5; */
 }
 
 form {
@@ -52,11 +52,15 @@ form button:hover{
 }
 #messages li {
     padding: 1rem;
-    border-bottom: 1px solid #e9d5ff;
+    /* border-bottom: 1px solid #e9d5ff; */
 }
 
 #messages li.your {
     background-color: #e9d5ff;
+}
+
+#messages li.not-your {
+    background-color: #d1fae5;;
 }
 .header {
     background-color: #b91c1c;
