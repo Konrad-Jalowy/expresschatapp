@@ -27,6 +27,13 @@ io.on('connection', (socket) => {
     socket.on('chat message', (msg) => {
       io.emit('chat message', msg);
     });
+
+    socket.on('disconnect', () => {
+        socket.broadcast.emit('user-disconnected', users[socket.id])
+        delete users[socket.id];
+        users_number--;
+        io.emit("users-number-change", users_number);
+      })
   });
 
 server.listen(3000, () => {
