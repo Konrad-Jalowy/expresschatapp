@@ -5,10 +5,13 @@
   </head>
   <body>
     <%- include('partials/header') %>
-    <ul id="messages"></ul>
+    <div class="group">
+        <ul id="messages"></ul>
     <form id="form" action="">
       <input id="input" autocomplete="off" /><button>Send</button>
     </form>
+    </div>
+    
     <%- include('partials/scripts') %>
   </body>
 </html>

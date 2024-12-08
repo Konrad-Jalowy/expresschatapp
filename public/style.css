@@ -10,9 +10,9 @@ body {
 }
 
 form {
-    position: fixed;
+    /* position: fixed;
     bottom: 0;
-    left: 0;
+    left: 0; */
     width: 100%;
     /* background-color: red; */
     display: flex;
@@ -49,6 +49,8 @@ form button:hover{
     margin: 0;
     padding: 0;
     /* background-color: #e9d5ff; */
+    
+    
 }
 #messages li {
     padding: 1rem;
@@ -83,4 +85,11 @@ span.name {
 span.message {
     font-size: 1.2rem;
     margin-left: 5px;
+}
+
+.group {
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
