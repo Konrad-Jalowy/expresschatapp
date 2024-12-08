@@ -24,9 +24,9 @@ io.on('connection', (socket) => {
         io.emit("users-number-change", users_number);
       });
 
-    socket.on('chat message', (msg, name) => {
-      io.emit('chat message', msg, name);
-    });
+    socket.on('send-chat-message', message => {
+        socket.emit('chat-message', { message: message, name: users[socket.id] })
+      })
 
     socket.on('disconnect', () => {
         socket.broadcast.emit('user-disconnected', users[socket.id])
