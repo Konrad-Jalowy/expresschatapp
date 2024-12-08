@@ -15,3 +15,8 @@ form #input{
     flex-grow: 1;
     min-height: 25px;
 }
+
+form button {
+    flex-basis: 120px;
+    padding: .5rem 1rem;
+}
