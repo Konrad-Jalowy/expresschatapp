@@ -22,8 +22,8 @@
             document.querySelector("#usrnum").textContent = `${user_number}`;
         });
         socket.on('chat-message', function(data) {
-            
-          appendMessage(data.name, data.message)
+          let _name = data.name === name? `You(${data.name})` : data.name;  
+          appendMessage(_name, data.message)
         });
 
         function appendMessage(name, message){
