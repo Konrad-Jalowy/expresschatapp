@@ -25,7 +25,7 @@ io.on('connection', (socket) => {
       });
 
     socket.on('send-chat-message', message => {
-        socket.emit('chat-message', { message: message, name: users[socket.id] })
+        io.emit('chat-message', { message: message, name: users[socket.id] })
       })
 
     socket.on('disconnect', () => {
